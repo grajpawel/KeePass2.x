@@ -4,6 +4,7 @@ using FluentAssertions;
 using KeePass.Forms;
 using KeePassLib.Security;
 using Xunit;
+
 public class FpFieldTest
 {
     [Fact]

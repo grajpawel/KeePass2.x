@@ -1,8 +1,8 @@
-﻿using FluentAssertions;
+﻿namespace KeePass.Test.CsvStreamReaderTests;
+
+using FluentAssertions;
 using KeePass.DataExchange;
 using Xunit;
-
-namespace KeePass.Test.CsvStreamReaderTests;
 
 public class CsvStreamReaderTest
 {
