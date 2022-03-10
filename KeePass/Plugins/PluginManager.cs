@@ -23,6 +23,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.Remoting;
 using System.Text;
 using System.Windows.Forms;
@@ -41,6 +42,7 @@ using KeePassLib.Interfaces;
 using KeePassLib.Native;
 using KeePassLib.Utility;
 
+[assembly: InternalsVisibleTo("KeePass.Test")]
 namespace KeePass.Plugins
 {
 	internal sealed class PluginManager : IEnumerable<PluginInfo>
@@ -180,8 +182,10 @@ namespace KeePass.Plugins
 
 			foreach(string strFile in lFiles)
 			{
+
+
 				if(bSkipCacheFiles && strFile.StartsWith(strCacheRoot,
-					StrUtil.CaseIgnoreCmp))
+					   StrUtil.CaseIgnoreCmp))
 					continue;
 
 				FileVersionInfo fvi = null;
